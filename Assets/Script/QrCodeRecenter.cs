@@ -25,7 +25,7 @@ public class QrCodeRecenter : MonoBehaviour {
     {
         if(Input.GetKeyUp(KeyCode.Space))
         {
-            SetQrCodeRecenterTarget("Entrence");
+            SetQrCodeRecenterTarget("Stairs");
         }
     }
 
