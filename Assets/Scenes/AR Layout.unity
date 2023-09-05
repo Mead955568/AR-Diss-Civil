@@ -5935,13 +5935,13 @@ MonoBehaviour:
   _cameraManager: {fileID: 571337799}
   _navigationTargetObjects:
   - Name: Stairs
-    PositionObject: {fileID: 0}
+    PositionObject: {fileID: 657621190}
   - Name: ' Start Point'
-    PositionObject: {fileID: 0}
+    PositionObject: {fileID: 728879655}
   - Name: Lobby
-    PositionObject: {fileID: 0}
+    PositionObject: {fileID: 1619344782}
   - Name: Classroom
-    PositionObject: {fileID: 0}
+    PositionObject: {fileID: 1370442042}
 --- !u!4 &1976508441
 Transform:
   m_ObjectHideFlags: 0
