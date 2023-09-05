@@ -46,5 +46,6 @@ public class SetNavTargeting : MonoBehaviour
     {
         _lineToggle = !_lineToggle;
         _lineRenderer.enabled = _lineToggle;
+        Debug.Log("Toggle Line Vis");
     }
 }
