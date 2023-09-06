@@ -51,9 +51,10 @@ public class SetNavTargeting : MonoBehaviour
                 ToggleVisibility();
             }
 
-           // Check If Floor Is Changing
-           // If Yes (Lead to Elevator), If No (Navigate)
+            // Check If Floor Is Changing
+            // If Yes (Lead to Elevator), If No (Navigate)
 
+            _targetPosition = currentTarget.PositionObject.transform.position;
         }
     }
     public void ToggleVisibility()
@@ -99,8 +100,8 @@ public class SetNavTargeting : MonoBehaviour
         }
         if (floorNumber == 2)
         {
-            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Stairs F2"));
-            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Kitchen F2"));
+            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("StairsF2"));
+            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("KitchenF2"));
         }
     }
 }

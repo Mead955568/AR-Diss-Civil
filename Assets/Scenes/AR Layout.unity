@@ -921,7 +921,7 @@ GameObject:
   - component: {fileID: 111545335}
   - component: {fileID: 111545334}
   m_Layer: 9
-  m_Name: Target Entrence
+  m_Name: Entrence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2766,8 +2766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c6d353fcd4917488be1dab1f40f1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textField: {fileID: 0}
-  _fixedText: 
+  _textField: {fileID: 904059513}
+  _fixedText: Height
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,7 +3197,7 @@ GameObject:
   - component: {fileID: 452379030}
   - component: {fileID: 452379029}
   m_Layer: 9
-  m_Name: Target Classroom
+  m_Name: Classroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4326,7 +4326,7 @@ GameObject:
   - component: {fileID: 649147964}
   - component: {fileID: 649147963}
   m_Layer: 9
-  m_Name: Target Kitchen F2
+  m_Name: KitchenF2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4631,7 +4631,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Target Stairs F2
+          m_StringArgument: StairsF2
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1529996698}
+        m_TargetAssemblyTypeName: SetNavTargeting, Assembly-CSharp
+        m_MethodName: ChangeActiveFloor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &659242079
@@ -6810,7 +6822,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Target Stairs
+          m_StringArgument: Stairs
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1529996698}
+        m_TargetAssemblyTypeName: SetNavTargeting, Assembly-CSharp
+        m_MethodName: ChangeActiveFloor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &928383573
@@ -7406,7 +7430,7 @@ GameObject:
   - component: {fileID: 1035081371}
   - component: {fileID: 1035081370}
   m_Layer: 9
-  m_Name: Target Stairs
+  m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10302,9 +10326,9 @@ MonoBehaviour:
     PositionObject: {fileID: 452379027}
   - Name: Lobby
     PositionObject: {fileID: 1672614219}
-  - Name: Stairs F2
+  - Name: StairsF2
     PositionObject: {fileID: 1682549802}
-  - Name: Kitchen F2
+  - Name: KitchenF2
     PositionObject: {fileID: 649147961}
   _navYOffset: {fileID: 643022478}
 --- !u!1 &1569238492
@@ -11018,7 +11042,7 @@ GameObject:
   - component: {fileID: 1672614222}
   - component: {fileID: 1672614221}
   m_Layer: 9
-  m_Name: Target Lobby
+  m_Name: Lobby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11115,7 +11139,7 @@ GameObject:
   - component: {fileID: 1682549805}
   - component: {fileID: 1682549804}
   m_Layer: 9
-  m_Name: Target Stairs F2
+  m_Name: StairsF2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12512,7 +12536,7 @@ MonoBehaviour:
     PositionObject: {fileID: 1619344782}
   - Name: Classroom
     PositionObject: {fileID: 1370442042}
-  - Name: Stairs F2
+  - Name: StairsF2
     PositionObject: {fileID: 666550036}
 --- !u!4 &1976508441
 Transform:
