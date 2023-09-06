@@ -18,6 +18,8 @@ public class SetNavTargeting : MonoBehaviour
     private LineRenderer _lineRenderer; // Linerenderer To Display Path
     private Vector3 _targetPosition = Vector3.zero; // Current Target Position
 
+    private int _currentFloor = 1;
+
     private bool _lineToggle = false;
 
     private void Start() // Create New Path
@@ -44,7 +46,14 @@ public class SetNavTargeting : MonoBehaviour
         Target currentTarget = _navTargetObjects.Find(x => x.Name.Equals(selectedText));
         if (currentTarget != null)
         {
-            _targetPosition = currentTarget.PositionObject.transform.position;
+           if (!_lineRenderer.enabled)
+            {
+                ToggleVisibility();
+            }
+
+           // Check If Floor Is Changing
+           // If Yes (Lead to Elevator), If No (Navigate)
+
         }
     }
     public void ToggleVisibility()
@@ -52,6 +61,11 @@ public class SetNavTargeting : MonoBehaviour
         _lineToggle = !_lineToggle;
         _lineRenderer.enabled = _lineToggle;
         Debug.Log("Toggle Line Vis");
+    }
+    public void ChangeActiveFloor(int floorNumber)
+    {
+        _currentFloor = floorNumber;
+        SetNavTargetDropDownOptions(_currentFloor);
     }
     public Vector3[] AddLineOffset() 
     {
@@ -67,5 +81,26 @@ public class SetNavTargeting : MonoBehaviour
         }
         return calculatedLine;
     }
+    private void SetNavTargetDropDownOptions(int floorNumber)
+    {
+        _navTargetDropDown.ClearOptions();
+        _navTargetDropDown.value = 0;
 
+        if (_lineRenderer.enabled)
+        {
+            ToggleVisibility();
+        }
+        if (floorNumber == 1)
+        {
+            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Stairs"));
+            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Entrence"));
+            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Classroom"));
+            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Lobby"));
+        }
+        if (floorNumber == 2)
+        {
+            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Stairs F2"));
+            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Kitchen F2"));
+        }
+    }
 }

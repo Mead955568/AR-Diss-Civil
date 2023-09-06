@@ -113,10 +113,12 @@ public class QrCodeRecenter : MonoBehaviour {
             // Add offset for recentering
             _sessionOrigin.transform.position = currentTarget.PositionObject.transform.position;
             _sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
+            Debug.Log("QR Code Recenter");
         }
     }
     public void ChangeActiveFloor(string floorEntrance)
     {
         SetQrCodeRecenterTarget(floorEntrance);
+        Debug.Log("Change Floor");
     }
 }
