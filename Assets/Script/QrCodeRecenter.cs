@@ -115,4 +115,8 @@ public class QrCodeRecenter : MonoBehaviour {
             _sessionOrigin.transform.rotation = currentTarget.PositionObject.transform.rotation;
         }
     }
+    public void ChangeActiveFloor(string floorEntrance)
+    {
+        SetQrCodeRecenterTarget(floorEntrance);
+    }
 }
