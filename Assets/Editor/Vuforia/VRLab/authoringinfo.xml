@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<QCARInfo>
+    <TargetSet version="3.4">
+        <AreaTarget version="5.1" bbox="-8.6509 -2.5361 -11.6944 6.7634 1.9549 12.5010" targetId="96912cd3f753449f815046022d20e406" name="VRLab" pathAuthoring="96912cd3f753449f815046022d20e406_authoring.glb" pathOcclusion="96912cd3f753449f815046022d20e406_occlusion.3dt" pathNavMesh="96912cd3f753449f815046022d20e406_navmesh.glb" cloudTarget="false" />
+    </TargetSet>
+</QCARInfo>
