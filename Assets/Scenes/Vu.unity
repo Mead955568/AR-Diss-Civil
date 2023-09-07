@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 5f49f847d67c7f44497eca08fb73eb18, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 6de5fae296ebb8e49829659914e8eda6, type: 2}
 --- !u!1 &20618216
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,9 +439,9 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 726653579
-  m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -522,7 +522,7 @@ PositionConstraint:
   m_Active: 1
   m_IsLocked: 0
   m_Sources:
-  - sourceTransform: {fileID: 1680089765}
+  - sourceTransform: {fileID: 0}
     weight: 1
 --- !u!1 &124563767
 GameObject:
@@ -608,7 +608,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 74112771}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SetNavTargeting, Assembly-CSharp
         m_MethodName: ToggleVisibility
         m_Mode: 1
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 74112771}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SetNavTargeting, Assembly-CSharp
         m_MethodName: SetCurrentNavTarget
         m_Mode: 0
