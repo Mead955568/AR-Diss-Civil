@@ -18,6 +18,8 @@ public class SetNavTargeting : MonoBehaviour
     private LineRenderer _lineRenderer; // Linerenderer To Display Path
     private Vector3 _targetPosition = Vector3.zero; // Current Target Position
 
+    public GameObject arCamera;
+
     private int _currentFloor = 1;
 
     private bool _lineToggle = false;
@@ -31,9 +33,9 @@ public class SetNavTargeting : MonoBehaviour
 
     private void Update() // Calculate Line Position
     {
-        if (_lineToggle && _targetPosition != Vector3.zero) 
+        if (_lineToggle && _targetPosition != Vector3.zero)
         {
-            NavMesh.CalculatePath(transform.position, _targetPosition, NavMesh.AllAreas, _path);
+            NavMesh.CalculatePath(arCamera.transform.position, _targetPosition, NavMesh.AllAreas, _path);
             _lineRenderer.positionCount = _path.corners.Length;
             Vector3[] calculatedPathAndOffset = AddLineOffset();
             _lineRenderer.SetPositions(calculatedPathAndOffset);
@@ -46,7 +48,7 @@ public class SetNavTargeting : MonoBehaviour
         Target currentTarget = _navTargetObjects.Find(x => x.Name.Equals(selectedText));
         if (currentTarget != null)
         {
-           if (!_lineRenderer.enabled)
+            if (!_lineRenderer.enabled)
             {
                 ToggleVisibility();
             }
@@ -68,7 +70,7 @@ public class SetNavTargeting : MonoBehaviour
         _currentFloor = floorNumber;
         SetNavTargetDropDownOptions(_currentFloor);
     }
-    public Vector3[] AddLineOffset() 
+    public Vector3[] AddLineOffset()
     {
         if (_navYOffset.value == 0)
         {
@@ -91,17 +93,26 @@ public class SetNavTargeting : MonoBehaviour
         {
             ToggleVisibility();
         }
+
         if (floorNumber == 1)
         {
-            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Stairs"));
-            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Entrence"));
-            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Classroom"));
-            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Lobby"));
+            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Cube4"));
+            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Cube41"));
+            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Cube42"));
+            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Cube44"));
         }
-        if (floorNumber == 2)
-        {
-            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("StairsF2"));
-            _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("KitchenF2"));
-        }
+
+        //if (floorNumber == 1)
+        //{
+        //    _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Stairs"));
+        //    _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Entrence"));
+        //    _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Classroom"));
+        //    _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("Lobby"));
+        //}
+        //if (floorNumber == 2)
+        //{
+        //    _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("StairsF2"));
+        //    _navTargetDropDown.options.Add(new TMP_Dropdown.OptionData("KitchenF2"));
+        //}
     }
 }
