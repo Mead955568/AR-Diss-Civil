@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 3
+    serializedVersion: 2
     agentTypeID: 0
     agentRadius: 0.2
     agentHeight: 2
@@ -117,12 +117,12 @@ NavMeshSettings:
     cellSize: 0.06666667
     manualTileSize: 0
     tileSize: 256
-    buildHeightMesh: 0
+    accuratePlacement: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 6de5fae296ebb8e49829659914e8eda6, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 63d7fd731224d374683ba4aa497177e2, type: 2}
 --- !u!1 &20618216
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +402,6 @@ MonoBehaviour:
   _navYOffset: {fileID: 174559952}
 --- !u!120 &74112772
 LineRenderer:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -441,7 +440,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
@@ -490,20 +489,16 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
     textureMode: 0
-    textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_MaskInteraction: 0
   m_UseWorldSpace: 1
   m_Loop: 0
-  m_ApplyActiveColorSpace: 0
 --- !u!1818360608 &74112773
 PositionConstraint:
   m_ObjectHideFlags: 0
@@ -512,14 +507,13 @@ PositionConstraint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74112769}
   m_Enabled: 1
-  serializedVersion: 2
   m_Weight: 1
   m_TranslationAtRest: {x: 0, y: 0, z: 0}
   m_TranslationOffset: {x: 0, y: 0, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 0
   m_AffectTranslationZ: 1
-  m_Active: 1
+  m_IsContraintActive: 0
   m_IsLocked: 0
   m_Sources:
   - sourceTransform: {fileID: 0}
@@ -734,9 +728,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -3478,7 +3470,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1391996300}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1343489125
 BoxCollider:
@@ -3488,18 +3480,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343489123}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1343489126
 MeshRenderer:
@@ -4246,17 +4230,9 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -4984,7 +4960,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1391996300}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1863481209
 BoxCollider:
@@ -4994,18 +4970,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863481207}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1863481210
 MeshRenderer:
@@ -5382,17 +5350,9 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -5461,17 +5421,9 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017437374}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2017437377
